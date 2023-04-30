@@ -18,7 +18,6 @@ const main = () => {
 }
 
 const prepareDOMElements = () => {
-	//pobieramy wszystkie elementy
 	todoInput = document.querySelector('.todo-input')
 	errorInfo = document.querySelector('.error-info')
 	addBtn = document.querySelector('.btn-add')
@@ -32,7 +31,6 @@ const prepareDOMElements = () => {
 }
 
 const prepareDOMEvents = () => {
-	//nadajemy nasluchiwanie
 	addBtn.addEventListener('click', addNewTodo)
 	ulList.addEventListener('click', checkClick)
 	popupCloseBtn.addEventListener('click', closePopup)
@@ -53,12 +51,6 @@ const addNewTodo = () => {
 		errorInfo.textContent = 'Enter your text!'
 	}
 }
-
-// 1. tworzy nowy element (li)
-// 2. dodaje nowy element do ul listy
-// 3. funkcja odpalana na click w przycisk ADD
-// 4. przechwytuje tresc z inputa i umieszcza go w nowo utworzonym LI
-// 5. funkcja nie doda do listy pustego 'todosa'
 
 const createToolsArea = () => {
 	const toolsPanel = document.createElement('div')
